@@ -18,7 +18,7 @@ public class GestionarCajero {
 
     public static void main(String[] args) {
         //cargamos el cajero con unos billetes y tarjetas  
-        int[][] carga_billetes = {{500, 10}, {200, 0}, {100, 0}, {50, 27},
+        int[][] carga_billetes = {{500, 1}, {200, 3}, {100, 0}, {50, 0},
         {20, 0}, {10, 18}, {5, 25}};
         CajeroAutomatico micajero = new CajeroAutomatico();
         micajero.setBilletes(carga_billetes);
