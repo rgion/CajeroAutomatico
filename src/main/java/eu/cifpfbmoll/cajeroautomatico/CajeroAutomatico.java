@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package cajeroautomatico;
+package eu.cifpfbmoll.cajeroautomatico;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -126,6 +126,9 @@ public class CajeroAutomatico {
         String resultado = "Desglose de la cantidad satisfecha: ";
         //for (int i = 0; i < this.getBilletes().length; i++) {
         int i = 0;
+        // esta solución es buena en siempre y cuando tengamos billetes de todos los tipos
+        // en otro caso, según la situación puede darse el caso que no devuelva la solución adecuada
+        // para ello no queda otra que explorar todo el conjunto de soluciones.
         while (i < this.getBilletes().length && cantidad > 0) {
             if (cantidad / this.getBilletes()[i][0] >= 1) {
                 int num_billetes = 0;
